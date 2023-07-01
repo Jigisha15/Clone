@@ -30,25 +30,25 @@ const Navbar = () => {
         <li>
           <NavLink className="nav-items">
             Solutions &nbsp;
-            <IoIosArrowDown />
+            <IoIosArrowDown size={12} />
           </NavLink>
         </li>
         <li>
           <NavLink className="nav-items">
             Partners &nbsp;
-            <IoIosArrowDown />
+            <IoIosArrowDown size={12} />
           </NavLink>
         </li>
         <li>
           <NavLink className="nav-items">
             Resources &nbsp;
-            <IoIosArrowDown />
+            <IoIosArrowDown size={12} />
           </NavLink>
         </li>
         <li>
           <NavLink className="nav-items">
             Company &nbsp;
-            <IoIosArrowDown />
+            <IoIosArrowDown size={12} />
           </NavLink>
         </li>
       </ul>

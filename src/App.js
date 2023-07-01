@@ -19,7 +19,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route
-            path="/home"
+            path="/"
             Component={Home}
           />
           <Route

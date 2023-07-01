@@ -12,7 +12,7 @@
   position: relative;
   /* mask-image: radial-gradient(rgba(0, 0, 0, 1), transparent); */
   /* mask-image: radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)); */
-  mask-image: radial-gradient(black, rgba(255, 255, 255, 0.5));
+  /* mask-image: radial-gradient(black, rgba(255, 255, 255, 0.5)); */
 }
 
 .image-text {

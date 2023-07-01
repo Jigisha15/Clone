@@ -16,10 +16,10 @@ const Navbar = () => {
   const [company, setCompany] = useState(false)
 
   console.log(product)
-  console.log(solution)
-  console.log(partners)
-  console.log(resources)
-  console.log(company)
+  // console.log(solution)
+  // console.log(partners)
+  // console.log(resources)
+  // console.log(company)
 
   return (
     <div className="navbar-container">
@@ -33,7 +33,7 @@ const Navbar = () => {
         <li>
           <NavLink
             onMouseEnter={() => setProduct(!product)}
-            onMouseLeave={() => setProduct(!product)}
+            // onMouseLeave={() => setProduct(!product)}
             className={product ? 'nav-items active' : 'nav-items'}
           >
             Products

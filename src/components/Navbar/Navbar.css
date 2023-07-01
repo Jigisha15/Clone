@@ -4,10 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* position: fixed; */
-  /* top: 0; */
-  /* z-index: 1; */
-  background-color: #fff;
+  background-color: rgb(51, 50, 50);
 }
 
 .logo {
@@ -25,14 +22,14 @@
 
 .nav-items {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .r-nav-items {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 1.3rem;
-  color: #009ada;
+  /* color: #009ada; */
   font-weight: 600;
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 import { TiSocialFacebook } from 'react-icons/ti'
 import { TiSocialTwitter } from 'react-icons/ti'
@@ -14,73 +14,124 @@ const Footer = () => {
     <div className="footer-container">
       <div className="footer-top">
         <div className="top-left">
-          <table>
-            <tr>
-              <th>About</th>
-              <th>Threat Center</th>
-              <th>Products</th>
-              <th>Resources</th>
-            </tr>
+          <ul className="first-list">
+            <li className="first-item ul-first">About</li>
+            <li>
+              <NavLink className="ul-item">Overview</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Why Proofpoint</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Careers</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Leadership Team</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">News Center</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Nexus Platform</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Privacy and Trust</NavLink>
+            </li>
+          </ul>
 
-            <tr>
-              <td>Overview</td>
-              <td>Threat Hub</td>
-              <td>Email Security & Protection</td>
-              <td>White Papers</td>
-            </tr>
-            <tr>
-              <td>Why Proofpoint</td>
-              <td>Cybersecurity Awareness Hub</td>
-              <td>Advanced Threat Protection</td>
-              <td>Webinars</td>
-            </tr>
-            <tr>
-              <td>Careers</td>
-              <td>Ransomware Hub</td>
-              <td>Security Awareness Training</td>
-              <td>Data Sheets</td>
-            </tr>
-            <tr>
-              <td>Leadership Team</td>
-              <td>Threat Glossary</td>
-              <td>Cloud Security</td>
-              <td>Events</td>
-            </tr>
-            <tr>
-              <td>News Center</td>
-              <td>Threat Blog</td>
-              <td>Archive & Compilance</td>
-              <td>Customer Stories</td>
-            </tr>
-            <tr>
-              <td>Nexus Platform</td>
-              <td>Daily Ruleset</td>
-              <td>Information Protection</td>
-              <td>Blog</td>
-            </tr>
-            <tr>
-              <td>Privacy and Trust</td>
-              <td></td>
-              <td>Digital Risk Protection</td>
-              <td>Free Trial</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>Product Bundles</td>
-              <td></td>
-            </tr>
-          </table>
+          <ul className="first-list">
+            <li className="first-item ul-first">Threat Center</li>
+            <li>
+              <NavLink className="ul-item">Threat Hub</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Cybersecurity Awareness Hub</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Ransomware Hub</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Threat Glossary</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Threat Blog</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Daily Ruleset</NavLink>
+            </li>
+          </ul>
+
+          <ul className="first-list">
+            <li className="first-item ul-first">Products</li>
+
+            <li>
+              <NavLink className="ul-item">Email Security & Protection</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Advanced Threat Protection</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Security Awareness Training</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Cloud Security</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Archive & Compilance</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Information Protection</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Digital Risk Protection</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Product Bundles</NavLink>
+            </li>
+          </ul>
+
+          <ul className="first-list">
+            <li className="first-item ul-first">Resources</li>
+            <li>
+              <NavLink className="ul-item">White Papers</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Webinars</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Data Sheets</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Events</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Customer Stories</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Blog</NavLink>
+            </li>
+            <li>
+              <NavLink className="ul-item">Free Trial</NavLink>
+            </li>
+          </ul>
         </div>
 
         <div className="top-right">
           <ul>
-            <li>Connect</li>
-            <li>+1-234-567-8910</li>
+            <li
+              style={{ color: 'white', fontWeight: '600', fontSize: '1.15rem' }}
+            >
+              Connect
+            </li>
+            <li style={{ color: '#009ada' }}>+1-234-567-8910</li>
             <li>Contact Us</li>
             <li>Office Locations</li>
             <li>Request a Demo</li>
-            <li>Support</li>
+            <li
+              style={{ color: 'white', fontWeight: '600', fontSize: '1.15rem' }}
+            >
+              Support
+            </li>
             <li>Support Login</li>
             <li>Support Serrvices</li>
             <li>Ip Address Blocked?</li>
@@ -92,41 +143,48 @@ const Footer = () => {
         <div className="fb-left">
           <ul className="fbl-left">
             <li>
-              <NavLink
+              <Link
+                to={'/'}
                 className="fbl-items
               "
               >
                 proofpoint.
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
+                to={'https://facebook.com'}
                 className="fbl-items icons
               "
               >
                 <TiSocialFacebook />
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
+                to={'https://twitter.com'}
                 className="fbl-items icons
               "
               >
                 <TiSocialTwitter />
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink className="fbl-items icons">
+              <Link
+                to={'https://linkedin.com'}
+                className="fbl-items icons"
+              >
                 <TiSocialLinkedin />
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
+                to={'https://youtube.com'}
                 className="fbl-items icons
                 "
               >
                 <TiSocialYoutube />
-              </NavLink>
+              </Link>
             </li>
           </ul>
         </div>

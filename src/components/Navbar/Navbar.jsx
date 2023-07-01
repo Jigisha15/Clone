@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 import { IoIosArrowDown } from 'react-icons/io'
 import { IoIosArrowUp } from 'react-icons/io'
@@ -9,36 +9,73 @@ import { IoSearch } from 'react-icons/io5'
 import './Navbar.css'
 
 const Navbar = () => {
+  const [product, setProduct] = useState(false)
+  const [solution, setSolution] = useState(false)
+  const [partners, setPartners] = useState(false)
+  const [resources, setResources] = useState(false)
+  const [company, setCompany] = useState(false)
+
+  console.log(product)
+  console.log(solution)
+  console.log(partners)
+  console.log(resources)
+  console.log(company)
+
   return (
     <div className="navbar-container">
       <ul className="left-nav">
-        <NavLink className=" logo nav-items">proofpoint.</NavLink>
+        <Link
+          to={'/'}
+          className=" logo nav-items"
+        >
+          proofpoint.
+        </Link>
         <li>
-          <NavLink className="nav-items">
+          <NavLink
+            onMouseEnter={() => setProduct(!product)}
+            onMouseLeave={() => setProduct(!product)}
+            className={product ? 'nav-items active' : 'nav-items'}
+          >
             Products
             <IoIosArrowDown />
           </NavLink>
         </li>
         <li>
-          <NavLink className="nav-items">
+          <NavLink
+            className="nav-items"
+            onMouseEnter={() => setSolution(!solution)}
+            onMouseLeave={() => setSolution(!solution)}
+          >
             Solutions
             <IoIosArrowDown />
           </NavLink>
         </li>
         <li>
-          <NavLink className="nav-items">
+          <NavLink
+            className="nav-items"
+            onMouseEnter={() => setPartners(!partners)}
+            onMouseLeave={() => setPartners(!partners)}
+          >
             Partners
             <IoIosArrowDown />
           </NavLink>
         </li>
         <li>
-          <NavLink className="nav-items">
+          <NavLink
+            className="nav-items"
+            onMouseEnter={() => setResources(!resources)}
+            onMouseLeave={() => setResources(!resources)}
+          >
             Resources
             <IoIosArrowDown />
           </NavLink>
         </li>
         <li>
-          <NavLink className="nav-items">
+          <NavLink
+            className="nav-items"
+            onMouseEnter={() => setCompany(!company)}
+            onMouseLeave={() => setCompany(!company)}
+          >
             Company
             <IoIosArrowDown />
           </NavLink>
@@ -48,7 +85,7 @@ const Navbar = () => {
       <ul className="right-nav">
         <li>
           <NavLink className="search r-nav-items">
-            <IoSearch />
+            <IoSearch color="white" />
           </NavLink>
         </li>
         <li>
@@ -57,10 +94,20 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink className="login r-nav-items">Login</NavLink>
+          <Link
+            className="login r-nav-items"
+            to={'/login'}
+          >
+            Login
+          </Link>
         </li>
         <li>
-          <NavLink className="contact-btn r-nav-items">Contact</NavLink>
+          <Link
+            className="contact-btn r-nav-items"
+            to={'/register'}
+          >
+            Register
+          </Link>
         </li>
       </ul>
     </div>

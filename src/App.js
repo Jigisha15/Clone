@@ -5,6 +5,9 @@ import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 
 import Home from './pages/Home/Home'
+import Products from './pages/Products/Products'
+import Login from './pages/Login/Login'
+import Register from './pages/Register/Register'
 
 import './App.css'
 
@@ -18,6 +21,18 @@ function App() {
           <Route
             path="/home"
             Component={Home}
+          />
+          <Route
+            path="/product"
+            Component={Products}
+          />
+          <Route
+            path="/login"
+            Component={Login}
+          />
+          <Route
+            path="/register"
+            Component={Register}
           />
         </Routes>
         <Footer />
